@@ -4,11 +4,23 @@
 
 Easy + Free Multiplayer VR using EOS!
 
+# Why this over PhotonVR/MirrorVR
+Free
+
+Easier
+
+Performance
+
+More Features (Object Nesting and Better Components)
+
 # Credits!
 
 Fishnet VR - cheesy games
+
 Fishnet - FirstGearGames
+
 FishyEOS - ETdoFresh
+
 EOS - PlayEveryware + Epic Games
 
 # Required!
