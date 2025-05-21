@@ -7,7 +7,7 @@
 
 ## Important! (This project is not affiliated with FishNet, If you need help with our asset, use our discord or the github issues!)
 
-Easy + Free Multiplayer VR using EOS! 🥳
+Easy + Free Multiplayer VR using Fishnet + EOS! 🥳
 
 # Why Fishnet VR over PhotonVR/MirrorVR
 ## detailed table
