@@ -1,6 +1,6 @@
 # Fishy VR! (Fishnet VR MULTIPLAYER GAME ASSET)
 ## Important! (This project is not affiliated with FishNet, If you need help with our asset, use our discord or the github issues!)
-[Join the Discord!](https://discord.gg/CMmDnkjrUc)
+[Join the Discord for help and announcements!](https://discord.gg/CMmDnkjrUc)
 
 Easy + Free Multiplayer VR using EOS!
 
