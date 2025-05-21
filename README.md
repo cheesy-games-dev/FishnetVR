@@ -43,7 +43,7 @@ Easy + Free Multiplayer VR using EOS! 🥳
 [Fishy EOS (Follow Readme Insructions)](https://github.com/ETdoFresh/FishyEOS)
 
 # How to download!
-Code > Download Zip > Extract > Drag Into Unity Project Window!
+Code > Download Zip > Extract > Drag Into Unity Project Window! 📩
 
 # How to setup EOS!
 
