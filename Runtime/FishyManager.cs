@@ -50,6 +50,7 @@ public class FishyManager : MonoBehaviour
 
     public string serverCode;
 
+    [ContextMenu("Start Server")]
     public void CreateServer() {
         CreateServer("", maxPlayers);
     }
