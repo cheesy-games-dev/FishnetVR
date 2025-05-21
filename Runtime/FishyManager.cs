@@ -1,6 +1,7 @@
 using FishNet.Component.Spawning;
 using FishNet.Managing;
 using FishNet.Managing.Observing;
+using FishNet.Managing.Scened;
 using FishNet.Transporting.FishyEOSPlugin;
 using UnityEngine;
 
@@ -78,5 +79,11 @@ public class FishyManager : MonoBehaviour
     public void ChangeMaxPlayers(int maxPlayers = 16) {
         Manager.maxPlayers = maxPlayers;
         transport.SetMaximumClients(maxPlayers);
+    }
+
+    public void ServerChangeScene(string scene) {
+        var data = new SceneLoadData(scene);
+        data.ReplaceScenes = ReplaceOption.All;
+        networkManager.SceneManager.LoadGlobalScenes(data);
     }
 }
