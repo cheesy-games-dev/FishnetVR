@@ -74,4 +74,7 @@ public class FishyManager : MonoBehaviour
     public static void ChangeColor(Color color) {
         Manager.color = color;
     }
+    public static void ChangeMaxPlayers(int maxPlayers = 16) {
+        transport.SetMaximumClients(maxPlayers);
+    }
 }
