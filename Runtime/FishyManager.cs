@@ -29,7 +29,7 @@ public class FishyManager : MonoBehaviour
     }
 
     private void Start() {
-        if (CreateServerOnStart) Invoke(nameof(CreateServer), 5f);
+        if (CreateServerOnStart) Invoke(nameof(CreateServer), 1f);
     }
 
     private void LoadPlayerPref() {
