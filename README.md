@@ -1,4 +1,4 @@
-# Fishy VR! (Fishnet VR MULTIPLAYER GAME ASSET)
+# Fishy VR! (Fishnet VR OPEN SOURCE MULTIPLAYER GAME ASSET)
 ## Important! (This project is not affiliated with FishNet, If you need help with our asset, use our discord or the github issues!)
 [Join the Discord for help and announcements!](https://discord.gg/CMmDnkjrUc)
 
@@ -12,6 +12,8 @@ Easier (Simple Synced Components and Customizable)
 Performant (Out Performs PUN and Mirror by alot)
 
 More Features (Object Nesting and Better Components)
+
+Open Source (Change Code, Create Issues and Pull Requests!)
 
 # Credits!
 
