@@ -9,3 +9,6 @@ Easy Free Multiplayer VR using EOS!
 [PlayEverywareEOS](https://github.com/EOS-Contrib/eos_plugin_for_unity/releases)
 
 [Fishy EOS (Follow Readme Insructions)](https://github.com/ETdoFresh/FishyEOS)
+
+# How to download!
+Code > Download Zip > Extract > Drag Into Unity Project Window!
