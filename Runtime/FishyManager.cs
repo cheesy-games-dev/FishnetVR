@@ -82,8 +82,11 @@ public class FishyManager : MonoBehaviour
     }
 
     public void ServerChangeScene(string scene) {
+        if (!networkManager.IsServer)
+            return;
         var data = new SceneLoadData(scene);
         data.ReplaceScenes = ReplaceOption.All;
+        data.PreferredActiveScene = new(scene);
         networkManager.SceneManager.LoadGlobalScenes(data);
     }
 }
