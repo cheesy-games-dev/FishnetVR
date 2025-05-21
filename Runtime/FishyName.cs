@@ -5,7 +5,6 @@ using UnityEngine;
 using TMPro;
 
 public class FishyName : MonoBehaviour {
-    [Tooltip("How high the text should be above the players head")]
     public float Offset = 0.17f;
     public Transform Head;
 
