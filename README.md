@@ -47,4 +47,4 @@ Code > Download Zip > Extract > Drag Into Unity Project Window! 📩
 
 # How to setup EOS!
 
-MirrorVR has a tutorial on it [here!](https://github.com/MirrorVR/MirrorVR/wiki/Installation#installation-steps)
+MirrorVR has a tutorial on it [here!](https://github.com/MirrorVR/MirrorVR/wiki/Installation#installation-steps) 👈
