@@ -7,6 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public struct CosmeticSlot {
     public string slotKey;
+    public bool hideLocalPlayer;
     public List<CosmeticPiece> cosmeticPieces;
 }
 
@@ -26,11 +27,19 @@ public class FishyPlayer : NetworkBehaviour
     public Transform Head, LeftHand, RightHand;
 
     public Renderer[] Renderer;
+
     public TMP_Text NicknameTMP;
     public List<CosmeticSlot> cosmeticSlots;
 
     public bool hideLocalPlayer;
+
+    [ServerRpc]
     public void ChangeCosmetic(string slotKey, string pieceKey) {
+        ChangeCosmeticClients(slotKey, pieceKey);
+    }
+
+    [ObserversRpc]
+    private void ChangeCosmeticClients(string slotKey, string pieceKey) {
         foreach (var slot in cosmeticSlots) {
             if (slot.slotKey == slotKey) {
                 foreach (var piece in slot.cosmeticPieces) {
@@ -40,6 +49,7 @@ public class FishyPlayer : NetworkBehaviour
                     else {
                         piece.cosmeticObject.SetActive(false);
                     }
+                    if(hideLocalPlayer && IsOwner) piece.cosmeticObject.SetActive(false);
                 }
                 return;
             }
