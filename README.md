@@ -5,11 +5,11 @@
 Easy + Free Multiplayer VR using EOS!
 
 # Why this over PhotonVR/MirrorVR
-Free
+Free (EOS Relay)
 
-Easier
+Easier (Simple Synced Components and Customizable)
 
-Performance
+Performant (Out Performs PUN and Mirror by alot)
 
 More Features (Object Nesting and Better Components)
 
