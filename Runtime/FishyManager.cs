@@ -18,7 +18,7 @@ public class FishyManager : MonoBehaviour
     
     public const string nicknameKey = "f_nickname";
     public const string colorKey = "f_color";
-    public bool autoCreate = true;
+    public bool CreateServerOnStart = true;
     public int maxPlayers = 16;
     void Awake() {
         Manager = this;
@@ -28,7 +28,7 @@ public class FishyManager : MonoBehaviour
     }
 
     private void Start() {
-        Invoke(nameof(CreateServer), 5f);
+        if (CreateServerOnStart) Invoke(nameof(CreateServer), 5f);
     }
 
     private void LoadPlayerPref() {
