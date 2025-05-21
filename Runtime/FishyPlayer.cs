@@ -49,7 +49,6 @@ public class FishyPlayer : NetworkBehaviour
                     else {
                         piece.cosmeticObject.SetActive(false);
                     }
-                    if(hideLocalPlayer && IsOwner) piece.cosmeticObject.SetActive(false);
                 }
                 return;
             }
@@ -74,10 +73,17 @@ public class FishyPlayer : NetworkBehaviour
         foreach (var r in Renderer) r.material.color = Color;
         if (!IsOwner)
             return;
-        foreach (var r in Renderer) if(hideLocalPlayer) r.enabled = false;
+        foreach (var r in Renderer) r.gameObject.SetActive(!hideLocalPlayer);
         SyncTransform(Head, FishyManager.Manager.Head);
         SyncTransform(LeftHand, FishyManager.Manager.LeftHand);
         SyncTransform(RightHand, FishyManager.Manager.RightHand);
+        foreach (var slot in cosmeticSlots) {
+            if (slot.hideLocalPlayer) {
+                foreach (var v in slot.cosmeticPieces) {
+                    v.cosmeticObject.gameObject.SetActive(false);
+                }
+            }
+        }
     }
 
     private void SyncTransform(Transform networked, Transform local) {
