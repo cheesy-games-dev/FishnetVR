@@ -657,6 +657,7 @@ MonoBehaviour:
   - slotKey: face
     cosmeticPieces:
     - pieceKey: glasess
+    - slot: 1
       cosmeticObject: {fileID: 8590181162898974922}
   - slotKey: lglove
     cosmeticPieces: []
