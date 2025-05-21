@@ -20,7 +20,6 @@ public class FishyManager : MonoBehaviour
     public const string colorKey = "f_color";
     public bool autoCreate = true;
     public int maxPlayers = 16;
-
     void Awake() {
         Manager = this;
         networkManager = GetComponent<NetworkManager>();
@@ -52,10 +51,12 @@ public class FishyManager : MonoBehaviour
     public string serverCode;
 
     public void CreateServer() {
-        CreateServer("", 16);
+        CreateServer("", maxPlayers);
     }
-
-    public static bool CreateServer(string serverCode = "", int maxPlayers = 16) {
+    public bool CreateServer(int maxPlayers = 16) {
+        return CreateServer("", maxPlayers);
+    }
+    public bool CreateServer(string serverCode = "", int maxPlayers = 16) {
         if (string.IsNullOrEmpty(serverCode))
             serverCode = Random.Range(1111, 9999).ToString();
         transport.SetMaximumClients(maxPlayers);
@@ -63,18 +64,18 @@ public class FishyManager : MonoBehaviour
         networkManager.ClientManager.StartConnection();
         return server;
     }
-
-    public static bool JoinServer(string serverCode) {
+    public bool JoinServer(string serverCode) {
         transport.RemoteProductUserId = serverCode;
         return networkManager.ClientManager.StartConnection();
     }
-    public static void ChangeNickname(string name) {
+    public void ChangeNickname(string name) {
         Manager.nickname = name;
     }
-    public static void ChangeColor(Color color) {
+    public void ChangeColor(Color color) {
         Manager.color = color;
     }
-    public static void ChangeMaxPlayers(int maxPlayers = 16) {
+    public void ChangeMaxPlayers(int maxPlayers = 16) {
+        Manager.maxPlayers = maxPlayers;
         transport.SetMaximumClients(maxPlayers);
     }
 }
