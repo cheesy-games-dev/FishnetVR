@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 1851173934273926269, guid: 1d258fc8933e4e240ba71d1b9e913fa4, type: 3}
-  _addToDefaultScene: 1
+  _addToDefaultScene: 0
   Spawns: []
 --- !u!114 &4940797166070532244
 MonoBehaviour:
