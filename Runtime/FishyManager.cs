@@ -11,7 +11,7 @@ using FishNet.Transporting.Tugboat;
 using PlayEveryWare.EpicOnlineServices;
 using UnityEngine;
 
-[DisallowMultipleComponent, RequireComponent(typeof(NetworkManager)), RequireComponent(typeof(PlayerSpawner)), RequireComponent(typeof(ObserverManager)), RequireComponent(typeof(Multipass)), RequireComponent(typeof(FishyEOS)), RequireComponent(typeof(Tugboat)), RequireComponent(typeof(EOSManager))]
+[DisallowMultipleComponent, RequireComponent(typeof(NetworkManager)), RequireComponent(typeof(PlayerSpawner)), RequireComponent(typeof(ObserverManager)), RequireComponent(typeof(FishyEOS)), RequireComponent(typeof(EOSManager))]
 public class FishyManager : MonoBehaviour
 {
     public static FishyManager Manager {
