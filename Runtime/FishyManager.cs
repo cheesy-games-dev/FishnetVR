@@ -1,11 +1,17 @@
+using Epic.OnlineServices;
+using Epic.OnlineServices.Lobby;
 using FishNet.Component.Spawning;
 using FishNet.Managing;
 using FishNet.Managing.Observing;
 using FishNet.Managing.Scened;
+using FishNet.Plugins.FishyEOS.Util;
 using FishNet.Transporting.FishyEOSPlugin;
+using FishNet.Transporting.Multipass;
+using FishNet.Transporting.Tugboat;
+using PlayEveryWare.EpicOnlineServices;
 using UnityEngine;
 
-[DisallowMultipleComponent, RequireComponent(typeof(NetworkManager)), RequireComponent(typeof(PlayerSpawner)), RequireComponent(typeof(ObserverManager)), RequireComponent(typeof(FishyEOS))]
+[DisallowMultipleComponent, RequireComponent(typeof(NetworkManager)), RequireComponent(typeof(PlayerSpawner)), RequireComponent(typeof(ObserverManager)), RequireComponent(typeof(Multipass)), RequireComponent(typeof(FishyEOS)), RequireComponent(typeof(Tugboat)), RequireComponent(typeof(EOSManager))]
 public class FishyManager : MonoBehaviour
 {
     public static FishyManager Manager {
@@ -21,6 +27,7 @@ public class FishyManager : MonoBehaviour
     public const string colorKey = "f_color";
     public bool CreateServerOnStart = true;
     public int maxPlayers = 16;
+
     void Awake() {
         Manager = this;
         networkManager = GetComponent<NetworkManager>();
@@ -41,7 +48,6 @@ public class FishyManager : MonoBehaviour
     void Update()
     {
         SavePlayerPref();
-        serverCode = transport.RemoteProductUserId;
     }
 
     private void SavePlayerPref() {
@@ -49,27 +55,23 @@ public class FishyManager : MonoBehaviour
         PlayerPrefs.SetString(colorKey, ColorUtility.ToHtmlStringRGB(color));
     }
 
-    public string serverCode;
-
     [ContextMenu("Start Server")]
     public void CreateServer() {
-        CreateServer("", maxPlayers);
+        CreateServer(maxPlayers);
     }
+
     public bool CreateServer(int maxPlayers = 16) {
-        return CreateServer("", maxPlayers);
-    }
-    public bool CreateServer(string serverCode = "", int maxPlayers = 16) {
-        if (string.IsNullOrEmpty(serverCode))
-            serverCode = Random.Range(1111, 9999).ToString();
         transport.SetMaximumClients(maxPlayers);
         bool server = networkManager.ServerManager.StartConnection();
         networkManager.ClientManager.StartConnection();
         return server;
     }
+
     public bool JoinServer(string serverCode) {
         transport.RemoteProductUserId = serverCode;
         return networkManager.ClientManager.StartConnection();
     }
+
     public void ChangeNickname(string name) {
         Manager.nickname = name;
     }

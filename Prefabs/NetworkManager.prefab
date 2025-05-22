@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 6972511929583124118}
   - component: {fileID: 4940797166070532244}
   - component: {fileID: 3235945143439353075}
+  - component: {fileID: 544259715349733695}
   - component: {fileID: 6800714424055688780}
+  - component: {fileID: 8417669869788828223}
+  - component: {fileID: 2038952914555396520}
+  - component: {fileID: 5026564153137473082}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -103,9 +107,24 @@ MonoBehaviour:
   RightHand: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   nickname: 
-  autoCreate: 1
+  CreateServerOnStart: 1
   maxPlayers: 16
-  serverCode: 
+--- !u!114 &544259715349733695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452246075897228602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314b449d3505bd24487ba69b61c2fda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalServerActions: 1
+  _transports:
+  - {fileID: 6800714424055688780}
+  - {fileID: 5026564153137473082}
 --- !u!114 &6800714424055688780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,5 +149,49 @@ MonoBehaviour:
     displayName: FishyEOS
     automaticallyCreateDeviceId: 1
     automaticallyCreateConnectAccount: 1
-    authScopeFlags: 0
+    authScopeFlags: 1
     timeout: 30
+--- !u!114 &8417669869788828223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452246075897228602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b21213b07b8e4348a36a33f9e2761d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2038952914555396520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452246075897228602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c06b9b50cdcdf45839b7da18fa5e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShouldShutdownOnApplicationQuit: 1
+--- !u!114 &5026564153137473082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452246075897228602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48f002b825cbd45a19bd96d90f9edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unreliableMTU: 1023
+  _ipv4BindAddress: 
+  _ipv6BindAddress: 
+  _port: 8080
+  _maximumClients: 4095
+  _clientAddress: localhost
+  _timeout: 15
