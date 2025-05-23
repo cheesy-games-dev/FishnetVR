@@ -34,6 +34,7 @@ Easy + Free Multiplayer VR using Fishnet + EOS! 🥳
 |FishyEOS - ETdoFresh 🍃|
 |EOS - PlayEveryware + Epic Games 🎮|
 |Icons - [Skillicons](https://skillicons.dev) 🌍|
+|Voice Chat - [Andrej Stojkovic](https://github.com/AndrejStojkovic/FishNet-Voice)|
 
 # Required!
 [Fishnet 3](https://github.com/FirstGearGames/FishNet/releases/download/3.11.18/FishNetworking.3.11.18R.unitypackage)
