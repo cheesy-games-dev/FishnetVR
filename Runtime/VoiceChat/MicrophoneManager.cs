@@ -43,6 +43,9 @@ public class MicrophoneManager : MonoBehaviour
 
     public string GetCurrentDeviceName()
     {
-        return Microphone.devices[Dropdown.value];
+        if(Dropdown)
+            return Microphone.devices[Dropdown.value];
+        else
+            return Microphone.devices[0];
     }
 }
